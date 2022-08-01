@@ -5,23 +5,41 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      value: '',
-      onChange: '',
-      checked: false,
-      disabled: false,
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '',
+      cardAttr2: '',
+      cardAttr3: '',
+      cardImage: '',
+      cardRare: '',
+      cardTrunfo: false,
+      // hasTrunfo: false,
+      // onSaveButtonClick:
     };
   }
 
   render() {
-    const { value, onChange, checked, disabled } = this.state;
+    const { cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
     return (
       <div>
         <h1>Tryunfo</h1>
         <Form
-          value={ value }
-          onChange={ onChange }
-          checked={ checked }
-          disabled={ disabled }
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
         />
       </div>
     );

@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 class Description extends Component {
   render() {
-    const { cardDescription, onInputChange } = this.props;
+    const { value, onChange } = this.props;
     return (
       <label htmlFor="Description">
         Descrição da carta:
         <textarea
-          value={ cardDescription }
+          value={ value }
           id="Description"
           cols="30"
           rows="10"
           data-testid="description-input"
-          onInput={ onInputChange }
-          name="cardDescription"
+          onInput={ onChange }
+          name="value"
         />
       </label>
     );
@@ -22,8 +22,8 @@ class Description extends Component {
 }
 
 Description.propTypes = {
-  cardDescription: PropTypes.string.isRequired,
-  onInputChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Description;

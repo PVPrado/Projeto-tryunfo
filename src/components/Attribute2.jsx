@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Attribute2 extends Component {
   render() {
-    const { cardAttr2, onInputChange } = this.props;
+    const { value, onChange } = this.props;
     return (
       <label htmlFor="Attr1">
         Segundo atributo:
@@ -11,8 +11,8 @@ class Attribute2 extends Component {
           id="Attr1"
           type="number"
           data-testid="attr2-input"
-          value={ cardAttr2 }
-          onChange={ onInputChange }
+          value={ value }
+          onChange={ onChange }
           name="attr2"
         />
       </label>
@@ -21,8 +21,8 @@ class Attribute2 extends Component {
 }
 
 Attribute2.propTypes = {
-  cardAttr2: PropTypes.string.isRequired,
-  onInputChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Attribute2;

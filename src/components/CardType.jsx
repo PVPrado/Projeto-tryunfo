@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 class CardType extends Component {
   render() {
-    const { cardRare, onInputChange } = this.props;
+    const { value, onChange } = this.props;
     return (
       <label htmlFor="tipo">
         Esta carta é de qual tipo:
         <select
-          value={ cardRare }
-          onChange={ onInputChange }
+          value={ value }
+          onChange={ onChange }
           id="tipo"
           data-testid="rare-input"
           name="rarity"
@@ -24,8 +24,8 @@ class CardType extends Component {
 }
 
 CardType.propTypes = {
-  cardRare: PropTypes.string.isRequired,
-  onInputChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default CardType;

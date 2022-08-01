@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 class CardName extends Component {
   render() {
-    const { cardName, onInputChange } = this.props;
+    const { value, onChange } = this.props;
 
     return (
       <label htmlFor="Nome">
         Nome da carta:
         <input
-          id="Name"
+          id="Nome"
           type="text"
           data-testid="name-input"
-          value={ cardName }
-          onChange={ onInputChange }
+          value={ value }
+          onChange={ onChange }
           name="cardName"
         />
       </label>
@@ -22,8 +22,8 @@ class CardName extends Component {
 }
 
 CardName.propTypes = {
-  cardName: PropTypes.string.isRequired,
-  onInputChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default CardName;

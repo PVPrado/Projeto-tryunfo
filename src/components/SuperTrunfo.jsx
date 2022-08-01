@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class SuperTrunfo extends Component {
   render() {
-    const { cardTrunfo, onInputChange } = this.props;
+    const { checked, onChange } = this.props;
     return (
       <label htmlFor="ST">
         Esta carta é Super Trunfo:
@@ -11,9 +11,9 @@ class SuperTrunfo extends Component {
           id="ST"
           type="checkbox"
           data-testid="trunfo-input"
-          checked={ cardTrunfo }
-          onChange={ onInputChange }
-          name="trunfo"
+          checked={ checked }
+          onChange={ onChange }
+          name="Trunfo"
         />
       </label>
     );
@@ -21,8 +21,8 @@ class SuperTrunfo extends Component {
 }
 
 SuperTrunfo.propTypes = {
-  cardTrunfo: PropTypes.bool.isRequired,
-  onInputChange: PropTypes.func.isRequired,
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default SuperTrunfo;
