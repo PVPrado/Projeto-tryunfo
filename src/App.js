@@ -19,6 +19,14 @@ class App extends React.Component {
     };
   }
 
+  selectComp = ({ target }) => {
+    const { name, type, checked } = target;
+    const value = type === 'checkbox' ? checked : target.value;
+    this.setState({
+      [name]: value,
+    });
+  }
+
   render() {
     const { cardName,
       cardDescription,
@@ -41,8 +49,18 @@ class App extends React.Component {
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
+          onInputChange={ this.selectComp }
         />
-        <Card />
+        <Card
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
+        />
       </div>
     );
   }

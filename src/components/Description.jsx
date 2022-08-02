@@ -14,7 +14,7 @@ class Description extends Component {
           rows="10"
           data-testid="description-input"
           onInput={ onChange }
-          name="value"
+          name="cardDescription"
         />
       </label>
     );

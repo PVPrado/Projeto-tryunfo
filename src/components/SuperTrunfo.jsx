@@ -13,7 +13,7 @@ class SuperTrunfo extends Component {
           data-testid="trunfo-input"
           checked={ checked }
           onChange={ onChange }
-          name="Trunfo"
+          name="cardTrunfo"
         />
       </label>
     );

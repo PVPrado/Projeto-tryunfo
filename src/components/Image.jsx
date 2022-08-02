@@ -11,6 +11,7 @@ class Image extends Component {
         data-testid="image-input"
         value={ value }
         onChange={ onChange }
+        name="cardImage"
       />
     );
   }

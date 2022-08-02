@@ -5,15 +5,15 @@ class Attribute2 extends Component {
   render() {
     const { value, onChange } = this.props;
     return (
-      <label htmlFor="Attr1">
+      <label htmlFor="Attr2">
         Segundo atributo:
         <input
-          id="Attr1"
+          id="Attr2"
           type="number"
           data-testid="attr2-input"
           value={ value }
           onChange={ onChange }
-          name="attr2"
+          name="cardAttr2"
         />
       </label>
     );

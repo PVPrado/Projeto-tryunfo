@@ -12,7 +12,7 @@ class CardType extends Component {
           onChange={ onChange }
           id="tipo"
           data-testid="rare-input"
-          name="rarity"
+          name="cardRare"
         >
           <option value="normal" selected>normal</option>
           <option value="raro">raro</option>

@@ -13,7 +13,7 @@ class Attribute1 extends Component {
           data-testid="attr1-input"
           value={ value }
           onChange={ onChange }
-          name="attr1"
+          name="cardAttr1"
         />
       </label>
     );
