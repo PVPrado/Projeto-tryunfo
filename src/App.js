@@ -143,6 +143,37 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
         />
+        <div>
+          {newArray.map((element) => (
+            <div key={ element.name }>
+              <Card
+                cardName={ element.name }
+                cardImage={ element.image }
+                cardRare={ element.rare }
+                cardAttr1={ element.attr1 }
+                cardAttr2={ element.attr2 }
+                cardAttr3={ element.attr3 }
+                cardTrunfo={ element.trunfo }
+                cardDescription={ element.descripton }
+              />
+            </div>
+          ))}
+        </div>
+        {/* {newArray.map((e, i) => (
+          <div key={ i }>
+            <Card
+              cardName={ e.cardName }
+              cardDescription={ e.cardDescription }
+              cardAttr1={ e.cardAttr1 }
+              cardAttr2={ e.cardAttr2 }
+              cardAttr3={ e.cardAttr3 }
+              cardImage={ e.cardImage }
+              cardRare={ e.cardRare }
+              cardTrunfo={ e.cardTrunfo }
+              isSaveButtonDisabled={ e.isSaveButtonDisabled }
+            />
+          </div>
+        ))} */}
       </div>
     );
   }
